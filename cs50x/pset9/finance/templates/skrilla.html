@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Skilla
+{% endblock %}
+
+{% block main %}
+<!--
+Add more money to account
+-->
+
+    <p>Funds low?  We got you covered!</p>
+    <form action="/skrilla" method="post">
+        <button class="btn btn-primary" type="submit">Give me $1000!</button>
+    </form>
+{% endblock %}

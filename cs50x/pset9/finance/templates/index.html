@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<!--
+Display stock information as table
+-->
+<h2>Current Stock and Cash Holdings</h2>
+<br/>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Current Price</th>
+            <th>Shares</th>
+            <th>Value of Stock Holdings</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.companyName }}</td>
+            <td>{{ stock.companySymbol }}</td>
+            <td>{{ stock.price | usd}}</td>
+            <td>{{ stock.shares }}</td>
+            <td>{{ stock.value | usd}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<table align="right">
+    <tr>
+        <td><b>Total cash</b></td>
+        <td>{{ cash }}</td>
+    </tr>
+    <tr>
+        <td><b>GRAND TOTAL</b></td>
+        <td>{{ total }}</td>
+    </tr>
+</table>
+<p>You just spent {{ purchase }}!</p>
+{% endblock %}

@@ -1,0 +1,39 @@
+sort1 uses: bubble sort
+
+How do you know?: As the dataset gets larger, the sorting time increases exponentially.  However, for the sorted sets, sort1 is lightning fast.  Of the three choices, bubble sort is the only one with the significally lower omega value (omega(1)).  See below data.
+Time for random5000: 0m0.092s
+Time for random10000: 0m0.309s
+Time for random50000: 0m7.606s
+Time for reversed5000: 0m0.068
+Time for reversed10000: 0m0.308s
+Time for reversed50000: 0m5.907
+Time for sorted5000: 0m0.041s
+Time for sorted10000: 0m0.058s
+Time for sorted50000: 0m0.700s
+
+
+sort2 uses: merge sort
+
+How do you know?: No matter the order of the elements, the time to complete sorting process is constant among sample size, so the big O and omeka values are the same.  Unlike sort3, the increase in time occurs at a much slower rate, closer to n log n than n^2, so this is likely merge sort.  See below data.
+Time for random5000: 0m0.045s
+Time for random10000: 0m0.064s
+Time for random50000: 0m0.614s
+Time for reversed5000: 0m0.033s
+Time for reversed10000: 0m0.080s
+Time for reversed50000: 0m0.624s
+Time for sorted5000: 0m0.045s
+Time for sorted10000: 0m0.081s
+Time for sorted50000: 0m0.821s
+
+sort3 uses: selection sort
+
+How do you know?: As with sort2, no matter the order of the elements, the time to complete sorting process is constant among sample size, so the big O and omeka values are the same.  Unlike sort2, the increase in time occurs at a much larger rate and when we get to the larger datasets, it behaves similarly to sort 1, which has a big O value of n^2, so this is likely selection sort.  See below data
+Time for random5000: 0m0.066s
+Time for random10000: 0m0.181s
+Time for random50000:0m3.258s
+Time for reversed5000: 0m0.045s
+Time for reversed10000: 0m0.169s
+Time for reversed50000: 0m3.273s
+Time for sorted5000: 0m0.068s
+Time for sorted10000: 0m0.196s
+Time for sorted50000: 0m4.053s

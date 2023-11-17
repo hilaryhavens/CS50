@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<!--
+Displays character speech acts as table
+-->
+<h2>Pride and Prejudice</h2>
+<br/>
+<h4>By Hilary Havens</h4>
+<br/>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Speech</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for speech in speeches %}
+        <tr>
+            <td><b>{{ speech.name }}: </b></td>
+            <td>{{ speech.text }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

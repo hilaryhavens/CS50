@@ -1,0 +1,43 @@
+table
+{
+    width: 100%;
+    border: 1px solid;
+}
+
+h2
+{
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: #9c3587;
+    font-size: 32px;
+}
+
+h4
+{
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    color: #9c3587;
+    font-size: 20px;
+}
+
+body
+{
+    font-family: "Garamond";
+    background-color: #fadadd;
+}
+
+th
+{
+    padding: 10px;
+    height: 70px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+td
+{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}

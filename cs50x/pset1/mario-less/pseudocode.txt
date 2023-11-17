@@ -1,0 +1,4 @@
+Ask user for height
+If height is less than 1 or greater than 8 and if height is not an integer, go back to line 1
+For each number i between 1 and 8, print i hashtags next to h-i spaces on i lines
+Quit

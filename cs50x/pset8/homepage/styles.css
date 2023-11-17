@@ -1,0 +1,34 @@
+body {
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: lightblue;
+    font-family: Garamond, serif;
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  figcaption {
+    color: gray;
+    font-size: 12px;
+  }
+
+  h1 {
+    color: #F01D7F;
+    text-align: center;
+  }
+
+  h2 {
+    color: #A420D0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  ol {
+    font-size: 20px;
+  }

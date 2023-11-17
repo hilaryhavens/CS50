@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Green button and "Correct!" for correct answer
+            function correct() {
+                document.getElementById("response1").innerHTML = "Correct!";
+                document.getElementById("right").style.backgroundColor = 'green';
+            }
+
+            // Red button and "Incorrect" for each incorrect answer
+            function incorrect1() {
+                document.getElementById("response1").innerHTML = "Incorrect";
+                document.getElementById("wrong1").style.backgroundColor = 'red';
+            }
+
+            function incorrect2() {
+                document.getElementById("response1").innerHTML = "Incorrect";
+                document.getElementById("wrong2").style.backgroundColor = 'red';
+            }
+
+            function incorrect3() {
+                document.getElementById("response1").innerHTML = "Incorrect";
+                document.getElementById("wrong3").style.backgroundColor = 'red';
+            }
+
+            function incorrect4() {
+                document.getElementById("response1").innerHTML = "Incorrect";
+                document.getElementById("wrong4").style.backgroundColor = 'red';
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Pride and Prejudice Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the name of the youngest Bennet sister?</h3>
+                <button type="button" id="wrong1" onclick="incorrect1()">Elizabeth</button>
+                <button type="button" id="wrong2" onclick="incorrect2()">Jane</button>
+                <button type="button" id="wrong3" onclick="incorrect3()">Kitty</button>
+                <button type="button" id="right" onclick="correct()">Lydia</button>
+                <button type="button" id="wrong4" onclick="incorrect4()">Mary</button>
+
+                <p id="response1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>How many brothers do the Bennet sisters have?</h3>
+                <!-- add input for response and button to confirm answer-->
+                <form>
+                    <input type="text"></input>
+                    <button type="button" id = "number">Check Answer</button>
+                </form>
+                <script>
+                    document.querySelector('#number').addEventListener('click', function() {
+                        let answer = document.querySelector('input');
+                        if (answer.value == '0') {
+                            answer.style.backgroundColor = 'green';
+                            document.getElementById("response2").innerHTML = "Correct!";
+                        }
+                        else {
+                            answer.style.backgroundColor = 'red';
+                            document.getElementById("response2").innerHTML = "Incorrect";
+                        }
+                    });
+                </script>
+                <!-- when incorrect answer provided, text field should turn red and incorrect should appear-->
+                <!-- when correct answer provided, text field should turn gree and correct should appear-->
+                <!-- TODO: Add free response question here -->
+                <p id="response2"></p>
+            </div>
+        </div>
+    </body>
+</html>
